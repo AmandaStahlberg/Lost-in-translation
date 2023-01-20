@@ -4,6 +4,7 @@ import { loginUser } from '../../api/user'
 import { storageSave } from '../../utils/storage';
 import { useNavigate } from 'react-router-dom'
 import { useUser } from '../../context/UserContext';
+import { STORAGE_KEY_USER } from '../../const/storageKeys';
 
 const usernameConfig = {
     required: true,
@@ -14,8 +15,7 @@ const usernameConfig = {
 const LoginForm = () => {
 
     const { register, handleSubmit, formState:{ errors } } = useForm()
-
-    const {user, setUser} = useUser()
+    const { user, setUser} = useUser()
     const navigate = useNavigate()
 
     const [loading, setLoading] = useState(false)
@@ -35,7 +35,7 @@ const LoginForm = () => {
             setApiError(error)
         }
         if(userResponse !== null) {
-            storageSave('user', userResponse)
+            storageSave(STORAGE_KEY_USER, userResponse)
             setUser(userResponse)
         }
         setLoading(false)
