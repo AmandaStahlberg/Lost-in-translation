@@ -1,10 +1,12 @@
 import { useForm } from "react-hook-form"
 
 
-const TranslationForm = () => {
+const TranslationForm = ({ onTranslation }) => {
     const {register, handleSubmit} = useForm()
-    const onSubmit = data => {
-        console.log( data)
+
+    const onSubmit = ({ message }) => {
+        onTranslation(message)
+    
     }
     return(
         <form onSubmit={ handleSubmit(onSubmit) }>
