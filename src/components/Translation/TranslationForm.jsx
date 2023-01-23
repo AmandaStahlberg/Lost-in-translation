@@ -1,3 +1,4 @@
+import { useState } from "react"
 import { useForm } from "react-hook-form"
 
 
@@ -7,21 +8,22 @@ const TranslationForm = ({ onTranslation }) => {
     const onSubmit = ({ message }) => {
         onTranslation(message)
         translateInput(message)
-        console.log(imageArray)
-    
     }
 
     const testString = "Hej"
 
-    let imageArray = []
+    const [imageArray, setImageArray] = useState([]);
 
 
+    // imageArray = [1,2,3]
+    //fixa mellanslag!
     const translateInput = (str) => {
         let string = str.toLowerCase()
+        let tempImageArray = []
         for (let i in string){
-           imageArray.push( string[i]+".png")
+           tempImageArray.push( string[i]+".png")
         }
-        return imageArray;
+        setImageArray (tempImageArray)
     }
 
      
