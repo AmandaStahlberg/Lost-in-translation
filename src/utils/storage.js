@@ -1,4 +1,10 @@
 export const storageSave = (key, value) => {
+  if (!key && typeof key !== "string") {
+    throw new Error("storageSave: No storage key provided");
+  }
+  if (!value) {
+    throw new Error("storageSave: No value provided for " + key);
+  }
   localStorage.setItem(key, JSON.stringify(value));
 };
 export const storageRead = (key) => {
@@ -9,6 +15,6 @@ export const storageRead = (key) => {
   return null;
 };
 
-export const storageDelete = key => {
+export const storageDelete = (key) => {
   localStorage.removeItem(key);
-}
+};
