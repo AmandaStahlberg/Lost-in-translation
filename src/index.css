@@ -10,3 +10,48 @@
     background: linear-gradient(0deg, rgba(239,221,204,1) 0%, rgba(215,214,204,1) 80%, rgba(189,206,204,1) 100%);
 min-height: 100vh;
 }
+
+.bg-green {
+    background-color: #BDCECC;
+}
+.bg-lightGreen {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputDiv {
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    
+    /* This bit draws the box around it */
+    border:1px solid grey;
+  
+    /* I've used padding so you can see the edges of the elements. */
+    padding:1px;
+
+    background-color: white;
+  }
+  
+  input {
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
+  }
+  
+  /* remove the input focus blue box, it will be in the wrong place. */
+  input:focus {
+    outline: none;
+  }
+  
+  /* Add the focus effect to the form so it contains the button */
+  inputDiv:focus-within { 
+    outline: 1px solid blue 
+  }
+  
+  button {
+    /* Just a little styling to make it pretty */
+    /* border:1px solid blue; */
+    /* background:blue; */
+    color:black;
+  }

@@ -42,17 +42,21 @@ const TranslationForm = ({ onTranslation }) => {
     }
 
     return(
-        <form onSubmit={ handleSubmit(onSubmit) }>
-            <fieldset>
-                <label htmlFor="message">Write your message here:</label>
-                <input type="text"{...register('message',messageConfig)} placeholder="Hello" />
-                {errorMessage}
-            </fieldset>
-            <button type="submit">Translate2</button>
+        <form className="bg-green h-full rounded-3xl flex flex-col justify-between " onSubmit={ handleSubmit(onSubmit) }>
+            <div className="flex bg-lightGreen">
             {imageArray.map((image,index) => {
                 return image === " .png"  ? <span key={index}>SPACE</span> :
-            <img key={index} alt="hej" src={`./assets/${image}`}/>
+                <img className="max-h-14 w-fit" key={index} alt="hej" src={`./assets/signs/${image}`}/>
             })} 
+            </div>
+            <div className=" flex flex-col justify-center">
+                {errorMessage}
+            <fieldset className="inputDiv">
+                {/* <label htmlFor="message">Write your message here:</label> */}
+                <input className="w-full rounded border-gray-900 h-10 w-4/5" type="text"{...register('message',messageConfig)} placeholder="Type what you want to translate here!" />
+            <button type="submit">pil till höger</button>
+            </fieldset>
+            </div>
         </form>
     )
 }
