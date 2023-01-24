@@ -10,7 +10,6 @@ const TranslationForm = ({ onTranslation }) => {
         translateInput(message)
     }
 
-    const testString = "Hej"
 
     const [imageArray, setImageArray] = useState([]);
 
@@ -50,7 +49,10 @@ const TranslationForm = ({ onTranslation }) => {
                 {errorMessage}
             </fieldset>
             <button type="submit">Translate2</button>
-            {imageArray.map((image,index) => (<img key={index} alt="hej" src={`./assets/${image}`}/>))} 
+            {imageArray.map((image,index) => {
+                return image === " .png"  ? <span>SPACE</span> :
+            <img key={index} alt="hej" src={`./assets/${image}`}/>
+            })} 
         </form>
     )
 }
