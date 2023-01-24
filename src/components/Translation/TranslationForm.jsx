@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form"
 
 
 const TranslationForm = ({ onTranslation }) => {
-    const {register, handleSubmit} = useForm()
+    const {register, handleSubmit, formState: {errors}} = useForm()
 
     const onSubmit = ({ message }) => {
         onTranslation(message)
@@ -25,15 +25,29 @@ const TranslationForm = ({ onTranslation }) => {
         }
         setImageArray (tempImageArray)
     }
-
-
+    const errorMessage = (() => {
+        if(!errors.message){
+            return null
+        }
+        if (errors.message.type ==='required'){
+            return  <span>You need to write something</span>
+        }
+        if (errors.message.type ==='pattern'){
+            return <span>Only use english alphbet (a to z) and space </span>
+        }
+    })()
      
+    const messageConfig = {
+        required: true,
+        pattern: /^[a-zA-Z][a-zA-Z ]*$/
+    }
 
     return(
         <form onSubmit={ handleSubmit(onSubmit) }>
             <fieldset>
                 <label htmlFor="message">Write your message here:</label>
-                <input type="text"{...register('message')} placeholder="Hello" />
+                <input type="text"{...register('message',messageConfig)} placeholder="Hello" />
+                {errorMessage}
             </fieldset>
             <button type="submit">Translate2</button>
             {imageArray.map((image,index) => (<img key={index} alt="hej" src={`./assets/${image}`}/>))} 
