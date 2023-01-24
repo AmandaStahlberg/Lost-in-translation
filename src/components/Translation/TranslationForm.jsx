@@ -50,7 +50,7 @@ const TranslationForm = ({ onTranslation }) => {
             </fieldset>
             <button type="submit">Translate2</button>
             {imageArray.map((image,index) => {
-                return image === " .png"  ? <span>SPACE</span> :
+                return image === " .png"  ? <span key={index}>SPACE</span> :
             <img key={index} alt="hej" src={`./assets/${image}`}/>
             })} 
         </form>
