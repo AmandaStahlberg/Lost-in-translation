@@ -16,7 +16,7 @@ const TranslationForm = ({ onTranslation }) => {
 
 
     // imageArray = [1,2,3]
-    //fixa mellanslag!
+    //fixa mellanslag
     const translateInput = (str) => {
         let string = str.toLowerCase()
         let tempImageArray = []
@@ -25,6 +25,7 @@ const TranslationForm = ({ onTranslation }) => {
         }
         setImageArray (tempImageArray)
     }
+
 
      
 
