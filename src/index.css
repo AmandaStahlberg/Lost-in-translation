@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-.App{
-    
-    background: rgb(239,221,204);
-    background: -moz-linear-gradient(0deg, rgba(239,221,204,1) 0%, rgba(215,214,204,1) 80%, rgba(189,206,204,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(239,221,204,1) 0%, rgba(215,214,204,1) 80%, rgba(189,206,204,1) 100%);
-    background: linear-gradient(0deg, rgba(239,221,204,1) 0%, rgba(215,214,204,1) 80%, rgba(189,206,204,1) 100%);
-min-height: 100vh;
+.App {
+  background: rgb(239, 221, 204);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  min-height: 100vh;
 }

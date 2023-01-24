@@ -1,10 +1,13 @@
 import LoginForm from "../components/Login/LoginForm";
+import LoginImage from "../components/Login/LoginImage";
 
 const Login = () => {
     return(
         <>
-        <h1>Login</h1>
+        <div className="flex flex-row flex-auto items-center" >
+        <LoginImage/>
         <LoginForm/>
+        </div>
         </>
     
 
