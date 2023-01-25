@@ -24,7 +24,7 @@ const ProfileClearHistory = () => {
   }
 
   return (
-    <div className="flex w-4/5 justify-between">
+    <div className="md:absolute left-0">
       {/* <li>
         <Link to="/translate">Translations</Link>
       </li> */}
