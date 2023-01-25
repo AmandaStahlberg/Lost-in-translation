@@ -34,7 +34,7 @@ const TranslationForm = ({ onTranslation }) => {
             return  <span>You need to write something</span>
         }
         if (errors.message.type ==='pattern'){
-            return <span>Only use english alphbet (a to z) and space </span>
+            return <span>Only use english alphabet (a to z) and space </span>
         }
     })()
      
