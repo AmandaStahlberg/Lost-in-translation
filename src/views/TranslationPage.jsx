@@ -19,13 +19,16 @@ const Translate = () => {
     console.log("UpdatedUser", updatedUser);
   };
   return (
-    <div className="flex flex-row h-full justify-center">
-    <section className="w-1/2" id="translate2">
+    <div className="flex items-center justify-center h-screen">
+
+    <div className="flex flex-row h- justify-center items-center w-full flex-wrap-reverse">
+    <section className="md:w-1/2 min-h-30" id="translate2">
         <TranslationForm onTranslation={handleTranslationClicked} />
       </section>
       <section id="helloGirl">
       <TranslationImage/>
       </section>
+    </div>
     </div>
   );
 };

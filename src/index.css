@@ -19,39 +19,35 @@ min-height: 100vh;
 }
 
 .inputDiv {
-    /* This bit sets up the horizontal layout */
     display:flex;
     flex-direction:row;
-    
-    /* This bit draws the box around it */
     border:1px solid grey;
-  
-    /* I've used padding so you can see the edges of the elements. */
     padding:1px;
-
     background-color: white;
   }
   
-  input {
-    /* Tell the input to use all the available space */
+  .inputDiv > input {
     flex-grow:2;
-    /* And hide the input's outline, so the form looks like the outline */
-    border:none;
+    border:none; 
   }
   
-  /* remove the input focus blue box, it will be in the wrong place. */
-  input:focus {
+  .inputDiv > input:focus {
     outline: none;
   }
   
-  /* Add the focus effect to the form so it contains the button */
-  inputDiv:focus-within { 
+  .inputDiv:focus-within { 
     outline: 1px solid blue 
   }
   
-  button {
-    /* Just a little styling to make it pretty */
-    /* border:1px solid blue; */
-    /* background:blue; */
-    color:black;
+  .inputDiv > button {
+    color: #778482 ;
+    padding-right: 1.25rem;
+    transition: padding-right .5s;
   }
+
+  .inputDiv > button:hover {
+    color: #778482 ;
+    padding-right: 1.1rem;
+
+  }
+  
