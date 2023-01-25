@@ -2,7 +2,7 @@ import ProfileClearHistory from "./ProfileClearHistory"
 import ProfileTranslationHistoryItem from "./ProfileTranslationHistoryItem"
 
 const ProfileTranslationHistory = ({ translations }) => {
-    const listOfMaxTen = translations.slice(0, 10)
+    const listOfMaxTen = translations.slice(-10)
 
     const translationList = listOfMaxTen.map(
         (translation, index) => <ProfileTranslationHistoryItem key={ index + '-' + translation} translation={translation} />)
