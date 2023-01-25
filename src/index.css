@@ -112,12 +112,14 @@ p {
     color: rgb(255, 255, 255);
     font-weight: 500;
     border: 2px solid #A57C94;
+    transition: border .5s;
   }
   .btn-primary:hover {
     border: 2px solid rgb(255, 255, 255);
   }
   
   .btn-secondary {
+    transition: border .5s;
     font-weight: 500;
     padding: .3rem 0;
     border: 2px solid #A57C94 ;
