@@ -1,10 +1,15 @@
 import LoginForm from "../components/Login/LoginForm";
+import LoginImage from "../components/Login/LoginImage";
+import LoginSpeechBubble from "../components/Login/LoginSpeechBubble";
 
 const Login = () => {
     return(
         <>
-        <h1>Login</h1>
+        <div >
+        <LoginImage/>
         <LoginForm/>
+        <LoginSpeechBubble/>
+        </div>
         </>
     
 
