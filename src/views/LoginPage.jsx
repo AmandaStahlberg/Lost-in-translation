@@ -5,10 +5,10 @@ import LoginSpeechBubble from "../components/Login/LoginSpeechBubble";
 const Login = () => {
     return(
         <>
-        <div >
+        <div className="flex flex-row flex-auto items-center" >
         <LoginImage/>
-        <LoginForm/>
         <LoginSpeechBubble/>
+        <LoginForm/>
         </div>
         </>
     
