@@ -65,69 +65,82 @@ p {
 }
 
 .bg-green {
-    background-color: #BDCECC;
-  }
-  .bg-lightGreen {
-    background-color: rgba(255, 255, 255, 0.5);
-  }
-  
-  .inputDiv {
-    display:flex;
-    flex-direction:row;
-    border:1px solid grey;
-    padding:1px;
-    background-color: white;
-  }
-  
-  .inputDiv > input {
-    flex-grow:2;
-    border:none; 
-  }
-  
-  .inputDiv > input:focus {
-    outline: none;
-  }
-  
-  .inputDiv:focus-within { 
-    outline: 1px solid blue 
-  }
-  
-  .inputDiv > button {
-    color: #778482 ;
-    padding-right: 1.25rem;
-    transition: padding-right .5s;
-  }
-  
-  .inputDiv > button:hover {
-    color: #778482 ;
-    padding-right: 1.1rem;
-    
-  }
-  
-  
-  .btn-primary {
-    background-color: #A57C94;
-    width: 7rem;
-    padding: .3rem 0;
-    color: rgb(255, 255, 255);
-    font-weight: 500;
-    border: 2px solid #A57C94;
-    transition: border .5s;
-  }
-  .btn-primary:hover {
-    border: 2px solid rgb(255, 255, 255);
-  }
-  
-  .btn-secondary {
-    transition: border .5s;
-    font-weight: 500;
-    padding: .3rem 0;
-    border: 2px solid #A57C94 ;
-    color: #A57C94;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 7rem;
-    
-  }
-  .btn-secondary:hover {
-    border: 2px solid rgb(255, 255, 255);
-  }
+  background-color: #bdcecc;
+}
+.bg-lightGreen {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 1px;
+  background-color: white;
+}
+
+.inputDiv > input {
+  flex-grow: 2;
+  border: none;
+}
+
+.inputDiv > input:focus {
+  outline: none;
+}
+
+.inputDiv:focus-within {
+  outline: 1px solid blue;
+}
+
+.inputDiv > button {
+  color: #778482;
+  padding-right: 1.25rem;
+  transition: padding-right 0.5s;
+}
+
+.inputDiv > button:hover {
+  color: #778482;
+  padding-right: 1.1rem;
+}
+
+.btn-primary {
+  background-color: #a57c94;
+  width: 7rem;
+  padding: 0.3rem 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  border: 2px solid #a57c94;
+  transition: border 0.5s;
+}
+.btn-primary:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.btn-secondary {
+  transition: border 0.5s;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  border: 2px solid #a57c94;
+  color: #a57c94;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 7rem;
+}
+.btn-secondary:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.navbar-link {
+  font-size: x-large;
+}
+
+.navbar-link:hover {
+  font-weight: bold;
+}
+
+.navbar-home {
+  color: #a57c94;
+}
+.navbar-home:hover {
+  font-weight: 950;
+  color: #7c5d6f;
+}

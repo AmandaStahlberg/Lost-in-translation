@@ -65,7 +65,7 @@ const LoginForm = () => {
     <>
       <div className="float right w-2/3 flex flex-col items-center  ">
         <div className="flex flex-col items-center w-4/5">
-          <h1 className="w-1/2 flex text-justify font-extrabold text-6xl  ">
+          <h1 className="w-1/2 flex text-justify font-extrabold text-6xl">
             CHESSY SLOGGAN
           </h1>
           <p className="w-1/2 place-self-center text-justify">
@@ -76,7 +76,7 @@ const LoginForm = () => {
           <form className="flex flex-col w-1/2" onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="inputDiv rounded-xl">
               <input type="text"
-                className="w-full rounded-xl h-10 w-4/5 pl-5"
+                className="w-full rounded-xl h-10 w-4/5"
                 placeholder="Enter your name here"
                 {...register("username", usernameConfig)}
               />
