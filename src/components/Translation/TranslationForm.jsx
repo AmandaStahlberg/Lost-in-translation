@@ -36,11 +36,15 @@ const TranslationForm = ({ onTranslation }) => {
         if (errors.message.type ==='pattern'){
             return <span>Only use english alphabet (a to z) and space </span>
         }
+        if (errors.message.type ==='maxLength'){
+            return <span>Max length of character is 50</span>
+        }
     })()
      
     const messageConfig = {
         required: true,
-        pattern: /^[a-zA-Z][a-zA-Z ]*$/
+        pattern: /^[a-zA-Z][a-zA-Z ]*$/,
+        maxLength: 50
     }
 
     return(
