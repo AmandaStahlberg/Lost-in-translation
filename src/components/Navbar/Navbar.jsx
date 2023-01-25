@@ -14,21 +14,26 @@ const Navbar = () => {
       };
 
     return (
-        <nav className="fixed">
+        <nav className="bg-white/[.09] px-8 fixed flex flex-row justify-between items-center  w-full h-20">
+            <div>
             <ul>
-                <li>Lost in Translations</li>
+                <li>
+                        <NavLink className="navbar-home text-4xl font-medium" to="./">Lost in Translations</NavLink></li>
             </ul>
+            </div>
             { user != null &&
-                <ul>
+            <div className="flex justify-end">
+                <ul className= "flex items-center gap-x-8">
                     <li>
-                        <NavLink to="/translate">Translate</NavLink>
+                        <NavLink className="navbar-link" to="/translate">Translate</NavLink>
                     </li>
                     <li>
-                        <NavLink to="/profile">Profile</NavLink>
+                        <NavLink className="navbar-link" to="/profile">Profile</NavLink>
                     </li>
                     <button className="flex justify-center items-center btn-secondary rounded-full" onClick={handleLogoutClick}>Logout</button>
 
                 </ul>
+            </div>
             }
 
         </nav>
