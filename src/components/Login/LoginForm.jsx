@@ -70,8 +70,8 @@ const LoginForm = () => {
           </h1>
           <h1 className="w-1/2 flex text-justify font-bold text-2xl">"BREAKING DOWN BARRIERS, <br /> ONE SIGN AT A TIME!"</h1>
           <p className="w-1/2  text-justify">
-          "Lost in Translation" offers you a seamless way to translate a text into sign language. 
-          We want to provide an easy-to-use platform that helps bridge the communication gap between hearing and non-hearing individuals.
+          "Lost in Translation" offers a seamless way to translate a text into sign language. 
+          Our goal is to provide an easy-to-use platform that helps bridge the communication gap between hearing and non-hearing individuals.
           Just write your name below to get started!
           </p>
           <form className="flex flex-col w-1/2" onSubmit={handleSubmit(onSubmit)}>
