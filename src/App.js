@@ -4,6 +4,7 @@ import Login from "./views/LoginPage";
 import Translate from "./views/TranslationPage";
 import Profile from "./views/ProfilePage";
 import Navbar from "./components/Navbar/Navbar";
+import PageNotFound from "./views/PageNotFound";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Login />} />
           <Route path="/translate" element={<Translate />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
     </Router>
