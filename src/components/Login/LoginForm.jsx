@@ -5,7 +5,7 @@ import { storageSave } from "../../utils/storage";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../context/UserContext";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
-import { ImArrowRight2 } from 'react-icons/im';
+import { ImArrowRight2 } from "react-icons/im";
 
 const usernameConfig = {
   required: true,
@@ -52,7 +52,12 @@ const LoginForm = () => {
       return <span className="text-center">Username is required</span>;
     }
     if (errors.username.type === "minLength") {
-      return <span className="text-center">Username is too short <br />(minimum 3 characters)</span>;
+      return (
+        <span className="text-center">
+          Username is too short <br />
+          (minimum 3 characters)
+        </span>
+      );
     }
   })();
 
@@ -60,24 +65,30 @@ const LoginForm = () => {
     <>
       <div className="float right w-2/3 flex flex-col items-center  ">
         <div className="flex flex-col items-center w-4/5">
-        <h1 className="w-1/2 text-justify font-extrabold text-5xl  ">CHESSY SLOGGAN</h1>
-        <p className="w-1/2 place-self-center text-justify">Här är en chessy text som beskriver vad hemsidan gör. Den är otroligt säljig och smörig. Skriv in ditt namn nedanför så kör vi igång!</p>
-        <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-          <fieldset className="inputDiv rounded-xl">
-          <input
-            type="text"
-            className="rounded-xl border-gray-900 h-10"
-            placeholder="Enter your name here"
-            {...register("username", usernameConfig)}
-            />
-          {loading && <p>Logging in...</p>}
-          {apiError && <p>{apiError}</p>}
-            <button type="submit" disabled={loading}>
-            <ImArrowRight2/>
-          </button>
+          <h1 className="w-1/2 text-justify font-extrabold text-5xl  ">
+            CHESSY SLOGGAN
+          </h1>
+          <p className="w-1/2 place-self-center text-justify">
+            Här är en chessy text som beskriver vad hemsidan gör. Den är
+            otroligt säljig och smörig. Skriv in ditt namn nedanför så kör vi
+            igång!
+          </p>
+          <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
+            <fieldset className="inputDiv rounded-xl">
+              <input
+                type="text"
+                className="rounded-xl border-gray-900 h-10"
+                placeholder="Enter your name here"
+                {...register("username", usernameConfig)}
+              />
+              {loading && <p>Logging in...</p>}
+              {apiError && <p>{apiError}</p>}
+              <button type="submit" disabled={loading}>
+                <ImArrowRight2 />
+              </button>
             </fieldset>
             {errorMessage}
-        </form>
+          </form>
         </div>
       </div>
     </>
