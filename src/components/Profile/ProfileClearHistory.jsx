@@ -4,15 +4,8 @@ import { useUser } from "../../context/UserContext";
 import { STORAGE_KEY_USER } from "../../const/storageKeys";
 import { translationClearHistory } from "../../api/translate";
 
-const ProfileActions = () => {
+const ProfileClearHistory = () => {
   const { user, setUser } = useUser();
-
-  const handleLogoutClick = () => {
-    if (window.confirm("Are you sure?")) {
-      storageDelete(STORAGE_KEY_USER);
-      setUser(null);
-    }
-  };
 
   const handleClearHistoryClick = async () => {
     if(!window.confirm('Are you sure? \nThis can not be undone.')) {
@@ -31,18 +24,13 @@ const ProfileActions = () => {
   }
 
   return (
-    <ul>
-      <li>
+    <div className="md:absolute left-0">
+      {/* <li>
         <Link to="/translate">Translations</Link>
-      </li>
-      <li>
-        <button onClick={ handleClearHistoryClick }>Clear history</button>
-      </li>
-      <li>
-        <button onClick={handleLogoutClick}>Logout</button>
-      </li>
-    </ul>
+      </li> */}
+        <button className="flex justify-center items-center btn-primary rounded-full" onClick={ handleClearHistoryClick }>Clear history</button>
+    </div>
   );
 };
 
-export default ProfileActions;
+export default ProfileClearHistory;

@@ -1,6 +1,6 @@
 import { translationAdd } from "../api/translate";
-import TranslationButton from "../components/Translation/TranslationButton";
 import TranslationForm from "../components/Translation/TranslationForm";
+import TranslationImage from "../components/Translation/TranslationImage";
 import { STORAGE_KEY_USER } from "../const/storageKeys";
 import { useUser } from "../context/UserContext";
 import withAuth from "../hoc/withAuth";
@@ -19,15 +19,17 @@ const Translate = () => {
     console.log("UpdatedUser", updatedUser);
   };
   return (
-    <>
-      <h1>Translate</h1>
-      <section id="translate-button">
-        <TranslationButton name="Translate" key="translate" />
-      </section>
-      <section id="translate2">
+    <div className="flex items-center justify-center h-screen">
+
+    <div className="flex flex-row h- justify-center items-center w-full flex-wrap-reverse">
+    <section className="md:w-1/2 min-h-30" id="translate2">
         <TranslationForm onTranslation={handleTranslationClicked} />
       </section>
-    </>
+      <section id="helloGirl">
+      <TranslationImage/>
+      </section>
+    </div>
+    </div>
   );
 };
 export default withAuth(Translate);

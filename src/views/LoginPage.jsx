@@ -1,13 +1,18 @@
 import LoginForm from "../components/Login/LoginForm";
+import LoginImage from "../components/Login/LoginImage";
+import LoginSpeechBubble from "../components/Login/LoginSpeechBubble";
 
 const Login = () => {
-    return(
-        <>
-        <h1>Login</h1>
-        <LoginForm/>
-        </>
-    
-
-    )
-}
+  return (
+    <>
+      <div>
+        <div className="pt-16 flex flex-row flex-auto items-center ">
+          <LoginImage />
+          <LoginSpeechBubble />
+          <LoginForm />
+        </div>
+      </div>
+    </>
+  );
+};
 export default Login;

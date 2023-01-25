@@ -1,5 +1,146 @@
-/* @tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
- */
+.App {
+  background: rgb(239, 221, 204);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(239, 221, 204, 1) 0%,
+    rgba(215, 214, 204, 1) 80%,
+    rgba(189, 206, 204, 1) 100%
+  );
+  min-height: 100vh;
+
+  font-family: "Roboto", sans-serif;
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 1px;
+  background-color: white;
+}
+
+.inputDiv > input {
+  flex-grow: 2;
+  border: none;
+}
+
+.inputDiv > input:focus {
+  outline: none;
+}
+
+.inputDiv:focus-within {
+  outline: 1px solid blue;
+}
+
+.inputDiv > button {
+  color: #778482;
+  padding-right: 1.25rem;
+  transition: padding-right 0.5s;
+}
+
+.inputDiv > button:hover {
+  color: #778482;
+  padding-right: 1.1rem;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+}
+
+.bg-green {
+  background-color: #bdcecc;
+}
+.bg-lightGreen {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.inputDiv {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid grey;
+  padding: 1px;
+  background-color: white;
+}
+
+.inputDiv > input {
+  flex-grow: 2;
+  border: none;
+}
+
+.inputDiv > input:focus {
+  outline: none;
+}
+
+.inputDiv:focus-within {
+  outline: 1px solid blue;
+}
+
+.inputDiv > button {
+  color: #778482;
+  padding-right: 1.25rem;
+  transition: padding-right 0.5s;
+}
+
+.inputDiv > button:hover {
+  color: #778482;
+  padding-right: 1.1rem;
+}
+
+.btn-primary {
+  background-color: #a57c94;
+  width: 7rem;
+  padding: 0.3rem 0;
+  color: rgb(255, 255, 255);
+  font-weight: 500;
+  border: 2px solid #a57c94;
+  transition: border 0.5s;
+}
+.btn-primary:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.btn-secondary {
+  transition: border 0.5s;
+  font-weight: 500;
+  padding: 0.3rem 0;
+  border: 2px solid #a57c94;
+  color: #a57c94;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 7rem;
+}
+.btn-secondary:hover {
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.navbar-link {
+  font-size: x-large;
+}
+
+.navbar-link:hover {
+  font-weight: bold;
+}
+
+.navbar-home {
+  color: #a57c94;
+}
+.navbar-home:hover {
+  font-weight: 950;
+  color: #7c5d6f;
+}
