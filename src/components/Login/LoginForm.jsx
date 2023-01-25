@@ -63,15 +63,16 @@ const LoginForm = () => {
 
   return (
     <>
-      <div className="float right w-2/3 flex flex-col items-center  ">
-        <div className="flex flex-col items-center w-4/5">
-          <h1 className="w-1/2 flex text-justify font-extrabold text-6xl">
-            CHESSY SLOGGAN
+      <div className="float right w-2/3 flex flex-col items-center ">
+        <div className="flex pl-20 flex-col space-y-1 items-start w-4/5">
+          <h1 className="w-1/2 flex  font-extrabold text-6xl">
+            LOST IN TRANSLATION
           </h1>
-          <p className="w-1/2 place-self-center text-justify">
-            Här är en chessy text som beskriver vad hemsidan gör. Den är
-            otroligt säljig och smörig. Skriv in ditt namn nedanför så kör vi
-            igång!
+          <h1 className="w-1/2 flex text-justify font-bold text-2xl">"BREAKING DOWN BARRIERS, <br /> ONE SIGN AT A TIME!"</h1>
+          <p className="w-1/2  text-justify">
+          "Lost in Translation" offers you a seamless way to translate a text into sign language. 
+          We want to provide an easy-to-use platform that helps bridge the communication gap between hearing and non-hearing individuals.
+          Just write your name below to get started!
           </p>
           <form className="flex flex-col w-1/2" onSubmit={handleSubmit(onSubmit)}>
             <fieldset className="inputDiv rounded-xl">
