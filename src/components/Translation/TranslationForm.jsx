@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import { ImArrowRight2 } from 'react-icons/im';
+
 
 
 const TranslationForm = ({ onTranslation }) => {
@@ -32,7 +34,7 @@ const TranslationForm = ({ onTranslation }) => {
             return  <span>You need to write something</span>
         }
         if (errors.message.type ==='pattern'){
-            return <span>Only use english alphbet (a to z) and space </span>
+            return <span>Only use english alphabet (a to z) and space </span>
         }
     })()
      
@@ -42,17 +44,21 @@ const TranslationForm = ({ onTranslation }) => {
     }
 
     return(
-        <form onSubmit={ handleSubmit(onSubmit) }>
-            <fieldset>
-                <label htmlFor="message">Write your message here:</label>
-                <input type="text"{...register('message',messageConfig)} placeholder="Hello" />
-                {errorMessage}
-            </fieldset>
-            <button type="submit">Translate2</button>
+        <form className="bg-green rounded-3xl flex flex-col justify-between p-4 min-h-[30rem] min-w-[15rem]" onSubmit={ handleSubmit(onSubmit) }>
+
+            <div className="flex flex-wrap bg-lightGreen rounded-xl">
             {imageArray.map((image,index) => {
-                return image === " .png"  ? <span key={index}>SPACE</span> :
-            <img key={index} alt="hej" src={`./assets/${image}`}/>
+                return image === " .png"  ? <span className="w-7" key={index}></span> :
+                <img className="max-h-14 w-fit" key={index} alt="hej" src={`./assets/signs/${image}`}/>
             })} 
+            </div>
+            <div className=" flex flex-col justify-center">
+                {errorMessage}
+            <fieldset className="inputDiv rounded-xl">
+                <input className="w-full rounded-xl h-10 w-4/5 pl-5" type="text"{...register('message',messageConfig)} placeholder="Type what you want to translate here!" />
+            <button className="" type="submit"><ImArrowRight2/></button>
+            </fieldset>
+            </div>
         </form>
     )
 }
