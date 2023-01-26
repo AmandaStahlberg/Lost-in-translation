@@ -69,7 +69,7 @@ const LoginForm = () => {
             LOST IN TRANSLATION
           </h1>
           <h1 className="w-full md:w-1/2 flex 3xl:text-justify font-bold text-3xl">"BREAKING DOWN BARRIERS, <br /> ONE SIGN AT A TIME!"</h1>
-          <p className="w-full md:w-1/2  3xl:text-justify">
+          <p className="w-full md:w-1/2  xl:text-justify">
           "Lost in Translation" offers a seamless way to translate a text into sign language. 
           Our goal is to provide an easy-to-use platform that helps bridge the communication gap between hearing and non-hearing individuals.
           Just write your name below to get started!
