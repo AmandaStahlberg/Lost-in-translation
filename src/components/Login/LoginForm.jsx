@@ -64,7 +64,7 @@ const LoginForm = () => {
   return (
     <>
       <div className="mt-10 md:m-0 md:float md:right w-full md:w-2/3 flex flex-col items-center ">
-        <div className="flex pl-20 flex-col space-y-1 items-start w-4/5">
+        <div className="flex md:pl-20 flex-col space-y-1 items-start w-4/5">
           <h1 className="w-full md:w-1/2 flex  font-extrabold text-4xl md:text-6xl">
             LOST IN TRANSLATION
           </h1>
