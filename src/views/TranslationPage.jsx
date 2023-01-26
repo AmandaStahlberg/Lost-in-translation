@@ -19,10 +19,10 @@ const Translate = () => {
     console.log("UpdatedUser", updatedUser);
   };
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center min-h-screen pt-36 md:pt-15">
 
-    <div className="flex flex-row h- justify-center items-center w-full flex-wrap-reverse">
-    <section className="md:w-1/2 min-h-30" id="translate2">
+    <div className="flex flex-row justify-center items-center w-full flex-wrap-reverse">
+    <section className="md:w-1/2 min-h-30 mb-20 sm:mb-0" id="translate2">
         <TranslationForm onTranslation={handleTranslationClicked} />
       </section>
       <section id="helloGirl">

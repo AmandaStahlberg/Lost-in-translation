@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <>
       <div>
-        <div className="pt-16 flex flex-col md:flex-row flex-auto items-center">
+        <div className="pt-36 md:pt-16 flex flex-col md:flex-row flex-auto items-center">
           <LoginImage />
           <LoginSpeechBubble />
           <LoginForm />
