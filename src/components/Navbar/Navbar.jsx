@@ -14,7 +14,7 @@ const Navbar = () => {
       };
 
     return (
-        <nav className="bg-white/[.09] px-8 fixed flex flex-row justify-between items-center  w-full h-20">
+        <nav className="bg-white/[.09] px-8 fixed flex flex-row justify-between items-center w-full h-36 md:h-20">
             <div>
             <ul>
                 <li>
@@ -23,7 +23,7 @@ const Navbar = () => {
             </div>
             { user != null &&
             <div className="flex justify-end">
-                <ul className= "flex items-center gap-x-8">
+                <ul className= "flex items-center gap-x-8 flex-col md:flex-row">
                     <li>
                         <NavLink className="navbar-link" to="/translate">Translate</NavLink>
                     </li>

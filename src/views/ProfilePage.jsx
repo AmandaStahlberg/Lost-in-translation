@@ -22,7 +22,7 @@ const Profile = () => {
   }, [setUser, user.id]);
 
   return (
-    <div className="flex items-center justify-center h-screen">
+    <div className="flex items-center justify-center min-h-screen">
       <div className="flex flex-col h-5/6 justify-evenly items-center w-full flex-wrap-reverse">
         <ProfileHeader username={user.username} />
         <ProfileTranslationHistory translations={user.translations} />
