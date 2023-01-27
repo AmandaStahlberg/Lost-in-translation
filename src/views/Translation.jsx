@@ -6,7 +6,7 @@ import { useUser } from "../context/UserContext";
 import withAuth from "../hoc/withAuth";
 import { storageSave } from "../utils/storage";
 
-const Translate = () => {
+const Translation = () => {
   const { user, setUser } = useUser();
   const handleTranslationClicked = async (text) => {
     const [error, updatedUser] = await translationAdd(user, text);
@@ -30,4 +30,4 @@ const Translate = () => {
     </div>
   );
 };
-export default withAuth(Translate);
+export default withAuth(Translation);

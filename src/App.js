@@ -1,7 +1,7 @@
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./views/Login";
-import Translate from "./views/Translate";
+import Translate from "./views/Translation";
 import Profile from "./views/Profile";
 import Navbar from "./components/Navbar/Navbar";
 import PageNotFound from "./views/PageNotFound";
