@@ -15,8 +15,6 @@ const Translate = () => {
     }
     storageSave(STORAGE_KEY_USER, updatedUser);
     setUser(updatedUser);
-    console.log("Error", error);
-    console.log("UpdatedUser", updatedUser);
   };
   return (
     <div className="flex items-center justify-center min-h-screen pt-36 md:pt-15">

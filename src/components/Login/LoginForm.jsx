@@ -28,7 +28,6 @@ const LoginForm = () => {
     if (user !== null) {
       navigate("translate");
     }
-    console.log("user has changed", user);
   }, [user, navigate]);
 
   const onSubmit = async ({ username }) => {
